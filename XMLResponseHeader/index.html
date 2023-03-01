@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      blank {
+        height: 20px;
+      }
+      a, th, td {
+        font-family: 'JetBrains Mono' monospace;
+      }
+      table td, table th {
+        width: 300px;
+        font-size: 16px;
+      }
+      table th {
+        font-weight: bold;
+      }
+    </style>
+    <script src='script.js'></script>
+  </head>
+  <body style='background-color: #0F0F0F;'>
+    <a style='font-size: 100px; color: #F0F0F0; margin-top: 100px;'>XMLHttpRequest Response Header Adblock Test</a>
+    <blank></blank>
+    <blank></blank>
+    <blank></blank>
+    <table>
+      <thead>
+        <tr>
+          <th colspan='2'>AdBlock Test</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AdBlcok Detected:</td>
+          <td id='AdBlockTotal'>Running...</td>
+        </tr>
+        <tr>
+          <td>XMLHttpRequest.prototype.status:</td>
+          <td id='XMLHttpRequestStatus'></td>
+        </tr>
+        <tr>
+          <td>XMLHttpRequest.prototype.getResponseHeader('content-length'):</td>
+          <td id='XMLHttpRequestResponseHeaderContentLength'></td>
+        </tr>
+        <tr>
+          <td>XMLHttpRequest.prototype.getResponseHeader('expires'):</td>
+          <td id='XMLHttpRequestResponseHeaderExpires'></td>
+        </tr>
+        <tr>
+          <td>XMLHttpRequest.prototype.getAllResponseHeaders:</td>
+          <td id='XMLHttpRequestResponseHeaders'></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
