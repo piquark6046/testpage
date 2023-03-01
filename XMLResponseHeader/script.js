@@ -15,6 +15,6 @@ GoogleAds.onreadystatechange = function()
   XMLHttpRequestResponseHeaderExpires = GoogleAds.getResponseHeader('expires')
 }
 
-[XMLHttpRequestStatus, XMLHttpRequestResponseHeaders, XMLHttpRequestResponseHeaderContentLength, XMLHttpRequestResponseHeaderExpires].forEach(function(e) {
+Array.from([XMLHttpRequestStatus, XMLHttpRequestResponseHeaders, XMLHttpRequestResponseHeaderContentLength, XMLHttpRequestResponseHeaderExpires]).forEach(function(e) {
   document.querySelector(e).textContent = e
 })
