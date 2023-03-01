@@ -1,4 +1,3 @@
-var AdblockTotal = ''
 var XMLHttpRequestStatus = ''
 var XMLHttpRequestResponseHeaders = ''
 var XMLHttpRequestResponseHeaderContentLength = ''
@@ -14,7 +13,7 @@ GoogleAds.onreadystatechange = function()
   XMLHttpRequestResponseHeaderContentLength = GoogleAds.getResponseHeader('content-length') ?? 'null'
   XMLHttpRequestResponseHeaderExpires = GoogleAds.getResponseHeader('expires') ?? 'null'
 
-  [XMLHttpRequestStatus, XMLHttpRequestResponseHeaders, XMLHttpRequestResponseHeaderContentLength, XMLHttpRequestResponseHeaderExpires].forEach(function(e) {
+  new Array(XMLHttpRequestStatus, XMLHttpRequestResponseHeaders, XMLHttpRequestResponseHeaderContentLength, XMLHttpRequestResponseHeaderExpires).forEach(function(e) {
     if (typeof document.querySelector(e)['textContent'] !== undefined) {
       document.querySelector(e).textContent = e
     }
