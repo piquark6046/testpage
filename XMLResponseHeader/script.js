@@ -4,7 +4,7 @@ var XMLHttpRequestResponseHeaderContentLength = ''
 var XMLHttpRequestResponseHeaderExpires = ''
 
 var GoogleAds = new XMLHttpRequest()
-GoogleAds.open('POST', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+GoogleAds.open('GET', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 GoogleAds.onreadystatechange = function()
 {
   XMLHttpRequestStatus = GoogleAds.status
