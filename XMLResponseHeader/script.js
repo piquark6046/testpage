@@ -5,7 +5,6 @@ var XMLHttpRequestResponseHeaderExpires = ''
 
 var GoogleAds = new XMLHttpRequest()
 GoogleAds.open('POST', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
-GoogleAds.setRequestHeader('Content-Type', 'GoogleAds')
 GoogleAds.onreadystatechange = function()
 {
   XMLHttpRequestStatus = GoogleAds.status
@@ -13,9 +12,9 @@ GoogleAds.onreadystatechange = function()
   XMLHttpRequestResponseHeaderContentLength = GoogleAds.getResponseHeader('content-length') ?? 'null'
   XMLHttpRequestResponseHeaderExpires = GoogleAds.getResponseHeader('expires') ?? 'null'
 
-  new Array(XMLHttpRequestStatus, XMLHttpRequestResponseHeaders, XMLHttpRequestResponseHeaderContentLength, XMLHttpRequestResponseHeaderExpires).forEach(function(e) {
-    if (typeof document.querySelector(e)['textContent'] !== undefined) {
-      document.querySelector(e).textContent = e
+  new Array('XMLHttpRequestStatus', 'XMLHttpRequestResponseHeaders', 'XMLHttpRequestResponseHeaderContentLength', 'XMLHttpRequestResponseHeaderExpires').forEach(function(e) {
+    if (typeof document.querySelector('#' + e)['textContent'] !== undefined) {
+      document.querySelector('#' + e).textContent = window[e]
     }
   })
 }
