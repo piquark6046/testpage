@@ -18,3 +18,4 @@ GoogleAds.onreadystatechange = function()
     document.querySelector(e).textContent = e
   })
 }
+GoogleAds.send()
