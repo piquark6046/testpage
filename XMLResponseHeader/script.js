@@ -1,8 +1,8 @@
-var AdblockTotal = null
-var XMLHttpRequestStatus = null
-var XMLHttpRequestResponseHeaders = null
-var XMLHttpRequestResponseHeaderContentLength = null
-var XMLHttpRequestResponseHeaderExpires = null
+var AdblockTotal = ''
+var XMLHttpRequestStatus = ''
+var XMLHttpRequestResponseHeaders = ''
+var XMLHttpRequestResponseHeaderContentLength = ''
+var XMLHttpRequestResponseHeaderExpires = ''
 
 var GoogleAds = new XMLHttpRequest()
 GoogleAds.open('POST', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
@@ -15,7 +15,9 @@ GoogleAds.onreadystatechange = function()
   XMLHttpRequestResponseHeaderExpires = GoogleAds.getResponseHeader('expires')
 
   [XMLHttpRequestStatus, XMLHttpRequestResponseHeaders, XMLHttpRequestResponseHeaderContentLength, XMLHttpRequestResponseHeaderExpires].forEach(function(e) {
-    document.querySelector(e).textContent = e
+    if (typeof document.querySelector(e)['textContent'] !== undefined) {
+      document.querySelector(e).textContent = e
+    }
   })
 }
 GoogleAds.send()
