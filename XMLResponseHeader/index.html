@@ -11,11 +11,19 @@
         color: #F0F0F0;
       }
       table td, table th {
-        width: 400px;
+        width: 150px;
         font-size: 16px;
+        white-space: nowrap;
+        text-align: center;
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px;
       }
       table th {
         font-weight: bold;
+      }
+      table {
+        margin-top: 50px;
       }
     </style>
     <script src='script.js'></script>
@@ -32,6 +40,10 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>AdBlock Detected:</td>
+          <td id='AdBlockCheck'>In progress...</td>
+        </tr>
         <tr>
           <td>XMLHttpRequest.prototype.status:</td>
           <td id='XMLHttpRequestStatus'></td>
@@ -50,4 +62,11 @@
         </tr>
       </tbody>
     </table>
+    <a style='margin-top: 100px; font-size: 16px; display:block;'>
+      This page is a test page that can help reproducing the the following issues:
+      <a href='https://github.com/uBlockOrigin/uBlock-issues/issues/2518' target='_blank'>uBlockOrigin/uBlock-issues#2518</a>
+      <a href='https://github.com/AdguardTeam/Scriptlets/issues/295' target='_blank'>AdguardTeam/Scriptlets#295</a>
+
+      Source code: <a href='https://github.com/piquark6046/testpage' target='_blank'>https://github.com/piquark6046/testpage</a>
+    </a>
   </body>

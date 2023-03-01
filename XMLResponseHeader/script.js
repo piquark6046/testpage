@@ -17,5 +17,8 @@ GoogleAds.onreadystatechange = function()
       document.querySelector('#' + e).textContent = window[e]
     }
   })
+
+  document.querySelector('#AdBlockCheck').textContent =
+  !(XMLHttpRequestStatus === 200 && XMLHttpRequestResponseHeaderContentLength !== 'null' && XMLHttpRequestResponseHeaderExpires !== 'null')
 }
 GoogleAds.send()
