@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      blank {
+        height: 20px;
+        display: inline-block;
+      }
+      a, th, td {
+        font-family: monospace;
+        color: #F0F0F0;
+      }
+      table td, table th {
+        width: 350px;
+        font-size: 16px;
+        text-align: center;
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px;
+      }
+      table th {
+        font-weight: bold;
+      }
+      table {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body style='background-color: #0F0F0F;'>
+    <a style='font-size: 25px; margin-top: 100px;'>Fetch Response Header Adblock Test</a>
+    <blank></blank>
+    <blank></blank>
+    <blank></blank>
+    <table>
+      <thead>
+        <tr>
+          <th colspan='2'>AdBlock Test</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AdBlock Detected:</td>
+          <td id='AdBlockCheck'>In progress...</td>
+        </tr>
+        <tr>
+          <td>Response.prototype.ok:</td>
+          <td id='ResponseOk'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.redirected:</td>
+          <td id='ResponseRedirected'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.type:</td>
+          <td id='ResponseType'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.url:</td>
+          <td id='ResponseURL'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.headers:</td>
+          <td id='ResponseHeaders'></td>
+        </tr>
+      </tbody>
+    </table>
+    <a style='margin-top: 100px; font-size: 16px; display:block;'>
+      This page is a test page that can help to reproduce the following issues:<br>
+      <a style='font-size: 16px' href='https://github.com/uBlockOrigin/uBlock-issues/issues/2518' target='_blank'>uBlockOrigin/uBlock-issues#2518</a><br>
+      <a style='font-size: 16px' href='https://github.com/AdguardTeam/Scriptlets/issues/295' target='_blank'>AdguardTeam/Scriptlets#295</a><br>
+      <br>
+      <a style='font-size: 16px'>Source code: </a><a style='font-size: 16px' href='https://github.com/piquark6046/testpage' target='_blank'>https://github.com/piquark6046/testpage</a>
+    </a>
+    <script src='script.js'></script>
+  </body>
