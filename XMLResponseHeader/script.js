@@ -21,6 +21,14 @@ GoogleAds.onreadystatechange = function()
   })
 
   document.querySelector('#AdBlockCheck').textContent =
-  !(XMLHttpRequestStatus === 200 && XMLHttpRequestResponseHeaderContentLength !== 'null' && XMLHttpRequestResponseHeaderExpires !== 'null')
+  !(XMLHttpRequestStatus === 200 &&
+    XMLHttpRequestResponseHeaderContentLength !== 'null' &&
+    XMLHttpRequestResponseHeaderExpires !== 'null' &&
+    XMLHttpRequestResponseURL === 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+
+  document.querySelector('#AdBlockCheckNoFingerprinting').textContent =
+  !(XMLHttpRequestStatus === 200 &&
+    XMLHttpRequestResponseHeaderContentLength !== 'null' &&
+    XMLHttpRequestResponseHeaderExpires !== 'null')
 }
 GoogleAds.send()
