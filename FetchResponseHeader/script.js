@@ -13,15 +13,15 @@ Fetch.then(function(response) {
   ResponseHeaders = response.headers
 
   new Array('ResponseOk', 'ResponseRedirected', 'ResponseType', 'ResponseURL').forEach(function(e) {
-    document.querySelector(e).textContent = window[e]
+    document.querySelector('#' + e).textContent = window[e]
   })
 
   for (var e of ResponseHeaders.keys()) {
-    document.querySelector('ResponseHeaders').textContent += e + ': ' + ResponseHeaders.get(e) + '\n'
+    document.querySelector('#ResponseHeaders').textContent += e + ': ' + ResponseHeaders.get(e) + '\n'
   }
 })
 .catch(function() {
   new Array('AdBlockCheckNoFingerprinting', 'AdBlockCheck').forEach(function(e) {
-    document.querySelector(e).textContent = 'true'
+    document.querySelector('#' + e).textContent = 'true'
   })
 })
