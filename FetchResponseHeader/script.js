@@ -1,9 +1,9 @@
 var Fetch = fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', { method: 'GET' })
-var ResponseOk = null
-var ResponseRedirected = null
-var ResponseType = null
-var ResponseURL = null
-var ResponseHeaders = null
+var ResponseOk = ''
+var ResponseRedirected = ''
+var ResponseType = ''
+var ResponseURL = ''
+var ResponseHeaders = ''
 
 Fetch.then(function(response) {
   ResponseOk = response.ok
