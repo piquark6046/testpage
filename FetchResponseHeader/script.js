@@ -19,6 +19,14 @@ Fetch.then(function(response) {
   for (var e of ResponseHeaders.keys()) {
     document.querySelector('#ResponseHeaders').textContent += e + ': ' + ResponseHeaders.get(e) + '\n'
   }
+
+  document.querySelector('#AdBlockCheckNoFingerprinting').textContent = !(
+    ResponseOk && !ResponseRedirected && ResponseHeaders.get('content-length') && ResponseHeaders.get('expires')
+  )
+  document.querySelector('#AdBlockCheck').textContent = !(
+    ResponseOk && !ResponseRedirected && ResponseHeaders.get('content-length') && ResponseHeaders.get('expires') &&
+    ResponseURL === 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  )
 })
 .catch(function() {
   new Array('AdBlockCheckNoFingerprinting', 'AdBlockCheck').forEach(function(e) {
