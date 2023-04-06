@@ -6,8 +6,8 @@ Iframe2.src = 'about:blank'
 
 IframeBase.append(Iframe1, Iframe2)
 
-const IframeImageAG = Iframe1.contentWindow.document.createElement('img')
-const IframeImageuBO = Iframe2.contentWindow.document.createElement('img')
+const IframeImageAG = Iframe1.contentDocument.createElement('img')
+const IframeImageuBO = Iframe2.contentDocument.createElement('img')
 Iframe1.contentWindow.document.body.append(IframeImageAG)
 Iframe2.contentWindow.document.body.append(IframeImageuBO)
 
