@@ -8,8 +8,8 @@ IframeBase.append(Iframe1, Iframe2)
 
 const IframeImageAG = Iframe1.contentWindow.document.createElement('img')
 const IframeImageuBO = Iframe2.contentWindow.document.createElement('img')
-Iframe1.contentWindow.document.append(IframeImageAG)
-Iframe2.contentWindow.document.append(IframeImageuBO)
+Iframe1.contentWindow.document.body.append(IframeImageAG)
+Iframe2.contentWindow.document.body.append(IframeImageuBO)
 
 IframeImageAG.src = 'https://avatars.githubusercontent.com/u/8361145?s=200&v=4'
 IframeImageAG.id = 'IframeAdGuardLogo'
