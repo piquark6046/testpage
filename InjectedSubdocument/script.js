@@ -1,13 +1,15 @@
-const IframeBase = document.querySelector('#iframe-base')
-const Iframe1 = document.createElement('iframe')
+var IframeBase = document.querySelector('#iframe-base')
+var Iframe1 = document.createElement('iframe')
 Iframe1.src = 'about:blank'
-const Iframe2 = document.createElement('iframe')
+Iframe1.contentDocument.open()
+var Iframe2 = document.createElement('iframe')
 Iframe2.src = 'about:blank'
+Iframe2.contentDocument.open()
 
 IframeBase.append(Iframe1, Iframe2)
 
-const IframeImageAG = Iframe1.contentDocument.createElement('img')
-const IframeImageuBO = Iframe2.contentDocument.createElement('img')
+var IframeImageAG = Iframe1.contentDocument.createElement('img')
+var IframeImageuBO = Iframe2.contentDocument.createElement('img')
 Iframe1.contentWindow.document.body.append(IframeImageAG)
 Iframe2.contentWindow.document.body.append(IframeImageuBO)
 
