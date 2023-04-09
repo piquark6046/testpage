@@ -1,12 +1,12 @@
 var IframeBase = document.querySelector('#iframe-base')
 var Iframe1 = document.createElement('iframe')
 Iframe1.src = 'about:blank'
-Iframe1.contentDocument.open()
 var Iframe2 = document.createElement('iframe')
 Iframe2.src = 'about:blank'
-Iframe2.contentDocument.open()
 
 IframeBase.append(Iframe1, Iframe2)
+Iframe1.contentDocument.open()
+Iframe2.contentDocument.open()
 
 var IframeImageAG = Iframe1.contentDocument.createElement('img')
 var IframeImageuBO = Iframe2.contentDocument.createElement('img')
