@@ -7,6 +7,10 @@ Iframe2.src = 'about:blank'
 IframeBase.append(Iframe1, Iframe2)
 Iframe1.contentDocument.open()
 Iframe2.contentDocument.open()
+Iframe1.contentDocument.close()
+Iframe2.contentDocument.close()
+Iframe1.contentDocument.innerHTML = ''
+Iframe2.contentDocument.innerHTML = ''
 
 var IframeImageAG = Iframe1.contentDocument.createElement('img')
 var IframeImageuBO = Iframe2.contentDocument.createElement('img')
