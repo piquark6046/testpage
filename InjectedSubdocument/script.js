@@ -10,8 +10,8 @@ Iframe2.contentDocument.open()
 
 var IframeImageAG = Iframe1.contentDocument.createElement('img')
 var IframeImageuBO = Iframe2.contentDocument.createElement('img')
-Iframe1.contentWindow.document.body.append(IframeImageAG)
-Iframe2.contentWindow.document.body.append(IframeImageuBO)
+Iframe1.contentDocument.body.append(IframeImageAG)
+Iframe2.contentDocument.body.append(IframeImageuBO)
 
 IframeImageAG.src = 'https://avatars.githubusercontent.com/u/8361145?s=200&v=4'
 IframeImageAG.id = 'IframeAdGuardLogo'
