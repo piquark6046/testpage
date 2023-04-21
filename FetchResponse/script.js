@@ -4,6 +4,8 @@ var ResponseRedirected = ''
 var ResponseType = ''
 var ResponseURL = ''
 var ResponseHeaders = ''
+var ReSponseStatus = ''
+var ReSponseStatusText = ''
 
 Fetch.then(function(response) {
   ResponseOk = response.ok
@@ -11,8 +13,10 @@ Fetch.then(function(response) {
   ResponseType = response.type
   ResponseURL = response.url
   ResponseHeaders = response.headers
+  ReSponseStatus = response.status
+  ReSponseStatusText = response.statusText
 
-  new Array('ResponseOk', 'ResponseRedirected', 'ResponseType', 'ResponseURL').forEach(function(e) {
+  new Array('ResponseOk', 'ResponseRedirected', 'ResponseType', 'ResponseURL', 'ReSponseStatus', 'ReSponseStatusText').forEach(function(e) {
     document.querySelector('#' + e).textContent = window[e]
   })
 
