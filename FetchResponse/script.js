@@ -4,7 +4,7 @@ var ResponseRedirected = ''
 var ResponseType = ''
 var ResponseURL = ''
 var ResponseHeaders = ''
-var ResponseStatus = ''
+var ResponseStatus = -1
 var ResponseStatusText = ''
 
 Fetch.then(function(response) {
@@ -25,10 +25,12 @@ Fetch.then(function(response) {
   }
 
   document.querySelector('#AdBlockCheckNoFingerprinting').textContent = !(
-    ResponseOk && !ResponseRedirected && ResponseHeaders.get('content-length') && ResponseHeaders.get('expires')
+    ResponseOk && !ResponseRedirected && ResponseHeaders.get('content-length') && ResponseHeaders.get('expires') &&
+    ResponseStatus === 200 && ResponseStatusText === 'OK'
   )
   document.querySelector('#AdBlockCheck').textContent = !(
     ResponseOk && !ResponseRedirected && ResponseHeaders.get('content-length') && ResponseHeaders.get('expires') &&
+    ResponseStatus === 200 && ResponseStatusText === 'OK' &&
     ResponseURL === 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
   )
 })
