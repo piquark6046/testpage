@@ -33,6 +33,6 @@ GoogleAds.onreadystatechange = function()
   !(XMLHttpRequestStatus === 200 &&
     XMLHttpRequestResponseHeaderContentLength !== 'null' &&
     XMLHttpRequestResponseHeaderExpires !== 'null' &&
-    XMLHttpRequestStatusText === 'OK')
+    ((XMLHttpRequestStatusText === '' && navigator.userAgent.indexOf('Firefox') < 0) || (XMLHttpRequestStatusText === 'OK' && navigator.userAgent.indexOf('Firefox') > 0)))
 }
 GoogleAds.send()
