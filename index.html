@@ -7,13 +7,13 @@
 <body>
 </body>
 <script>
-  document.addEventListener('load', function () {
-    // Nickrolling
+  // Nickrolling
+  setTImeout(function () {
     if (['ko', 'ko-kp', 'ko-kr'].some(function (Language) { return Language === navigator.language })) {
       location.replace('https://www.youtube.com/watch?v=YcPU1lDjgSc')
     } else {
       location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
     }
-  })
+  }, 1000 * 60)
 </script>
 </html>
