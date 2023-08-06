@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      blank {
+        height: 20px;
+        display: inline-block;
+      }
+      a, th, td {
+        font-family: monospace;
+        color: #F0F0F0;
+      }
+      table td, table th {
+        width: 350px;
+        font-size: 16px;
+        text-align: center;
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px;
+      }
+      table th {
+        font-weight: bold;
+      }
+      table {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body style='background-color: #0F0F0F;'>
+    <a style='font-size: 25px; margin-top: 100px;'>Response Data Adblock Test</a>
+    <blank></blank>
+    <blank></blank>
+    <blank></blank>
+    <table>
+      <thead>
+        <tr>
+          <th colspan='2'>Fetch</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AdBlock Detected:</td>
+          <td id='FetchAdBlockCheck'>In progress...</td>
+        </tr>
+        <tr>
+          <td>Response.prototype.body.constructor.name:</td>
+          <td id='FetchConstructorName'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.text() is successful:</td>
+          <td id='FetchText'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.body == Response.prototype.text():</td>
+          <td id='FetchEqual'></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th colspan='2'>XMLHttpRequest</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AdBlock Detected:</td>
+          <td id='XHRAdBlockCheck'>In progress...</td>
+        </tr>
+        <tr>
+          <td>typeof Response.prototype.responseText:</td>
+          <td id='XHRResponseText'></td>
+        </tr>
+        <tr>
+          <td>typeof Response.prototype.response:</td>
+          <td id='XHRResponse'></td>
+        </tr>
+        <tr>
+          <td>Response.prototype.responseText === Response.prototype.response:</td>
+          <td id='XHREqual'></td>
+        </tr>
+      </tbody>
+    </table>
+    <a style='margin-top: 100px; font-size: 16px; display:block;'>
+      <a style='font-size: 16px'>Source code: </a><a style='font-size: 16px' href='https://github.com/piquark6046/testpage' target='_blank'>https://github.com/piquark6046/testpage</a>
+    </a>
+    <script src='script.js'></script>
+  </body>
