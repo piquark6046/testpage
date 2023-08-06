@@ -7,11 +7,13 @@
 <body>
 </body>
 <script>
-  // Nickrolling
-  if (['ko', 'ko-kp', 'ko-kr'].some(function (Language) { Language === navigator.language })) {
-    location.replace('https://www.youtube.com/watch?v=YcPU1lDjgSc')
-  } else {
-    location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-  }
+  document.addEventListener('load', function () {
+    // Nickrolling
+    if (['ko', 'ko-kp', 'ko-kr'].some(function (Language) { return Language === navigator.language })) {
+      location.replace('https://www.youtube.com/watch?v=YcPU1lDjgSc')
+    } else {
+      location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    }
+  })
 </script>
 </html>
