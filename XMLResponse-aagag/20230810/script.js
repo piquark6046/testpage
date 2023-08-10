@@ -12,6 +12,6 @@ XMLHttpRequestInstance.onloadend = function () {
     document.querySelector('td#XHRResponseTextLength').innerHTML = XHRResponseText.length.toString();
     document.querySelector('td#XHRResponseAdsbygoogle').innerHTML = XHRResponseAdsbygoogle.toString();
     document.querySelector('td#XHRAdBlockCheck').innerHTML =
-        (!(typeof XHRResponseText === 'string' && XHRResponseURL && XHRResponseText)).toString();
+        (!(typeof XHRResponseText === 'string' && XHRResponseURL && XHRResponseText && XHRResponseAdsbygoogle)).toString();
 };
 XMLHttpRequestInstance.send();
