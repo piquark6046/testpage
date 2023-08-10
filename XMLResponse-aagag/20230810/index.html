@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      blank {
+        height: 20px;
+        display: inline-block;
+      }
+      a, th, td {
+        font-family: monospace;
+        color: #F0F0F0;
+      }
+      table td, table th {
+        width: 350px;
+        font-size: 16px;
+        text-align: center;
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px;
+      }
+      table th {
+        font-weight: bold;
+      }
+      table {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body style='background-color: #0F0F0F;'>
+    <a style='font-size: 25px; margin-top: 100px;'>XMLHttpRequest Adblock Test on aagag</a>
+    <blank></blank>
+    <blank></blank>
+    <blank></blank>
+    <table>
+      <thead>
+        <tr>
+          <th colspan='2'>XMLHttpRequest</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AdBlock Detected:</td>
+          <td id='XHRAdBlockCheck'>In progress...</td>
+        </tr>
+        <tr>
+          <td>typeof XMLHttpRequest.prototype.responseText:</td>
+          <td id='XHRResponseText'></td>
+        </tr>
+        <tr>
+          <td>XMLHttpRequest.prototype.responseText.length:</td>
+          <td id='XHRResponseTextLength'></td>
+        </tr>
+        <tr>
+          <td>Is XMLHttpRequest.prototype.responseURL an empty response:</td>
+          <td id='XHRResponseURLEmpty'></td>
+        </tr>
+        <tr>
+          <td>Find 'google-adsense' OR 'googlesyndication' in XMLHttpRequest.prototype.responseText:</td>
+          <td id='XHRResponseAdsbygoogle'></td>
+        </tr>
+      </tbody>
+    </table>
+    <a style='margin-top: 100px; font-size: 16px; display:block;'>
+      <a style='font-size: 16px'>Source code: </a><a style='font-size: 16px' href='https://github.com/piquark6046/testpage' target='_blank'>https://github.com/piquark6046/testpage</a>
+    </a>
+    <script src='script.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </body>
