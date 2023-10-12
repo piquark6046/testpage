@@ -1,0 +1,19 @@
+<head>
+</head>
+
+<body>
+    <button id="test">Alert</button>
+</body>
+
+
+<script>
+(function () {
+  alert("Early call!");
+}
+)();
+
+let button = document.querySelector('#test');
+button.onclick = function () {
+    alert("Late call!");
+}
+</script>
