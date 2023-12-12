@@ -26,13 +26,13 @@ GoogleAds.onreadystatechange = function()
   !(XMLHttpRequestStatus === 200 &&
     XMLHttpRequestResponseHeaderContentLength !== 'null' &&
     XMLHttpRequestResponseHeaderExpires !== 'null' &&
-    ((XMLHttpRequestStatusText === '' && navigator.userAgent.indexOf('Firefox') < 0) || (XMLHttpRequestStatusText === 'OK' && navigator.userAgent.indexOf('Firefox') > 0)) &&
+    ((XMLHttpRequestStatusText === '' && navigator.userAgent.includes('Firefox')) || (XMLHttpRequestStatusText === 'OK' && !navigator.userAgent.includes('Firefox'))) &&
     XMLHttpRequestResponseURL === 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 
   document.querySelector('#AdBlockCheckNoFingerprinting').textContent =
   !(XMLHttpRequestStatus === 200 &&
     XMLHttpRequestResponseHeaderContentLength !== 'null' &&
     XMLHttpRequestResponseHeaderExpires !== 'null' &&
-    ((XMLHttpRequestStatusText === '' && navigator.userAgent.indexOf('Firefox') < 0) || (XMLHttpRequestStatusText === 'OK' && navigator.userAgent.indexOf('Firefox') > 0)))
+    ((XMLHttpRequestStatusText === '' && navigator.userAgent.includes('Firefox')) || (XMLHttpRequestStatusText === 'OK' && !navigator.userAgent.includes('Firefox'))))
 }
 GoogleAds.send()
