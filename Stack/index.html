@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      blank {
+        height: 20px;
+        display: inline-block;
+      }
+      a, th, td {
+        font-family: monospace;
+        color: #F0F0F0;
+      }
+      table td, table th {
+        width: 350px;
+        font-size: 16px;
+        text-align: center;
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px;
+      }
+      table th {
+        font-weight: bold;
+      }
+      table {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body style='background-color: #0F0F0F;'>
+    <script src='script.js'></script>
+    <script>
+      "use strict";
+      function ListElement() {
+          return document.querySelectorAll('*');
+      }
+      function Default() {
+          [1, 2, 3, 4].forEach(() => {
+              ListElement();
+          });
+      }
+      Default();
+    </script>
+  </body>
