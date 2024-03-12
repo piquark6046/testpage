@@ -8,3 +8,7 @@ function Default() {
     });
 }
 Default();
+function aSdf() {
+    console.log(new Error().stack);
+}
+aSdf();
